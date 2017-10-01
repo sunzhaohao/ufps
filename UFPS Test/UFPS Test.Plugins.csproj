@@ -76,17 +76,32 @@
     <Reference Include="UnityEngine.HoloLens">
       <HintPath>Library\UnityAssemblies\UnityEngine.HoloLens.dll</HintPath>
     </Reference>
+    <Reference Include="Photon3Unity3D">
+      <HintPath>Assets\Plugins\Photon3Unity3D.dll</HintPath>
+    </Reference>
     <Reference Include="websocket-sharp">
       <HintPath>Assets\Plugins\WebSocket\websocket-sharp.dll</HintPath>
     </Reference>
-    <Reference Include="Photon3Unity3D">
-      <HintPath>Assets\Plugins\Photon3Unity3D.dll</HintPath>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>Assets\Archimatix\Scripts\Core\plugins\ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Plugins\WebSocket\WebSocket.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Archimatix\Library\ColorKeys.txt" />
+    <None Include="Assets\Archimatix\Library\ColorsPersonal.txt" />
+    <None Include="Assets\Archimatix\Library\ColorsPro.txt" />
+    <None Include="Assets\Archimatix\README.txt" />
+    <None Include="Assets\Archimatix\Scripts\AXChangeLog Archive.txt" />
+    <None Include="Assets\Archimatix\Scripts\AXChangeLog.txt" />
+    <None Include="Assets\Archimatix\Scripts\Incorporated3rdPartyLibraries\LibNoise.Unity\COPYING.LESSER.txt" />
+    <None Include="Assets\Archimatix\Scripts\Incorporated3rdPartyLibraries\LibNoise.Unity\COPYING.txt" />
+    <None Include="Assets\Archimatix\Scripts\Incorporated3rdPartyLibraries\SimpleJSON\LICENSE.txt" />
+    <None Include="Assets\Archimatix\Scripts\Incorporated3rdPartyLibraries\poly2tri-cs-master\AUTHORS.txt" />
+    <None Include="Assets\Archimatix\Scripts\Incorporated3rdPartyLibraries\poly2tri-cs-master\LICENSE.txt" />
+    <None Include="Assets\Archimatix\Scripts\Incorporated3rdPartyLibraries\poly2tri-cs-master\README.txt" />
     <None Include="Assets\Photon Unity Networking\changelog.txt" />
     <None Include="Assets\Photon Unity Networking\link.xml" />
     <None Include="Assets\Photon Unity Networking\readme.txt" />

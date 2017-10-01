@@ -118,11 +118,17 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>Assets\Photon Unity Networking\Editor\PhotonNetwork\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="Photon3Unity3D">
+      <HintPath>Assets\Plugins\Photon3Unity3D.dll</HintPath>
+    </Reference>
     <Reference Include="websocket-sharp">
       <HintPath>Assets\Plugins\WebSocket\websocket-sharp.dll</HintPath>
     </Reference>
-    <Reference Include="Photon3Unity3D">
-      <HintPath>Assets\Plugins\Photon3Unity3D.dll</HintPath>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>Assets\Archimatix\Scripts\Core\plugins\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-UnityScript">
+      <HintPath>Library\ScriptAssemblies\Assembly-UnityScript.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -136,6 +142,53 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Archimatix\Scripts\Editor\ArchimatixEngine.cs" />
+    <Compile Include="Assets\Archimatix\Scripts\Editor\AXEditorUtilities.cs" />
+    <Compile Include="Assets\Archimatix\Scripts\Editor\AXModelInspector.cs" />
+    <Compile Include="Assets\Archimatix\Scripts\Editor\AXModelInspectorGUI\AXRuntimeHandlesGUILayout.cs" />
+    <Compile Include="Assets\Archimatix\Scripts\Editor\AXModelInspectorGUI\ParameterAliasGUILayout.cs" />
+    <Compile Include="Assets\Archimatix\Scripts\Editor\AXPrototypeInspector.cs" />
+    <Compile Include="Assets\Archimatix\Scripts\Editor\AXStartupWindow.cs" />
+    <Compile Include="Assets\Archimatix\Scripts\Editor\GeneratorHandlers\DeformerHandlers.cs" />
+    <Compile Include="Assets\Archimatix\Scripts\Editor\GeneratorHandlers\FreeCurveHandler.cs" />
+    <Compile Include="Assets\Archimatix\Scripts\Editor\GeneratorHandlers\GeneratorHandler.cs" />
+    <Compile Include="Assets\Archimatix\Scripts\Editor\GeneratorHandlers\LinearRepeater2DHandler.cs" />
+    <Compile Include="Assets\Archimatix\Scripts\Editor\GeneratorHandlers\MesherHandlers.cs" />
+    <Compile Include="Assets\Archimatix\Scripts\Editor\GeneratorHandlers\OrganizerHandlers.cs" />
+    <Compile Include="Assets\Archimatix\Scripts\Editor\GeneratorHandlers\PlanRepeater2DHandler.cs" />
+    <Compile Include="Assets\Archimatix\Scripts\Editor\GeneratorHandlers\PrimitiveHandlers.cs" />
+    <Compile Include="Assets\Archimatix\Scripts\Editor\GeneratorHandlers\RadialRepeater2DHandler.cs" />
+    <Compile Include="Assets\Archimatix\Scripts\Editor\GeneratorHandlers\RepeaterHandlers.cs" />
+    <Compile Include="Assets\Archimatix\Scripts\Editor\GeneratorHandlers\ReplicatorHandler.cs" />
+    <Compile Include="Assets\Archimatix\Scripts\Editor\GeneratorHandlers\ShapeHandlers.cs" />
+    <Compile Include="Assets\Archimatix\Scripts\Editor\GeneratorHandlers\ToolHandlers.cs" />
+    <Compile Include="Assets\Archimatix\Scripts\Editor\GravitasHandlers\GravitasHandlers.cs" />
+    <Compile Include="Assets\Archimatix\Scripts\Editor\GUIDrawing.cs" />
+    <Compile Include="Assets\Archimatix\Scripts\Editor\JSONSerializersAX.cs" />
+    <Compile Include="Assets\Archimatix\Scripts\Editor\Library.cs" />
+    <Compile Include="Assets\Archimatix\Scripts\Editor\Library\LibraryEditView.cs" />
+    <Compile Include="Assets\Archimatix\Scripts\Editor\Library\LibraryGridView.cs" />
+    <Compile Include="Assets\Archimatix\Scripts\Editor\LibraryEditor.cs" />
+    <Compile Include="Assets\Archimatix\Scripts\Editor\LibraryEditorWindow.cs" />
+    <Compile Include="Assets\Archimatix\Scripts\Editor\MainMenuItems.cs" />
+    <Compile Include="Assets\Archimatix\Scripts\Editor\NodeGraph\AXHandleGUI.cs" />
+    <Compile Include="Assets\Archimatix\Scripts\Editor\NodeGraph\AXNodeGraphEditorWindow.cs" />
+    <Compile Include="Assets\Archimatix\Scripts\Editor\NodeGraph\AXPrefabWindow.cs" />
+    <Compile Include="Assets\Archimatix\Scripts\Editor\NodeGraph\EditorWindowZooming.cs" />
+    <Compile Include="Assets\Archimatix\Scripts\Editor\NodeGraph\GeometryControlsGui.cs" />
+    <Compile Include="Assets\Archimatix\Scripts\Editor\NodeGraph\LibraryMenu.cs" />
+    <Compile Include="Assets\Archimatix\Scripts\Editor\NodeGraph\MeshOuputMenu.cs" />
+    <Compile Include="Assets\Archimatix\Scripts\Editor\NodeGraph\NodeMenu.cs" />
+    <Compile Include="Assets\Archimatix\Scripts\Editor\NodeGraph\ParameterGUI.cs" />
+    <Compile Include="Assets\Archimatix\Scripts\Editor\NodeGraph\ParameterMeshGUI.cs" />
+    <Compile Include="Assets\Archimatix\Scripts\Editor\NodeGraph\ParameterSplineGUI.cs" />
+    <Compile Include="Assets\Archimatix\Scripts\Editor\NodeGraph\ParameterTextureGUI.cs" />
+    <Compile Include="Assets\Archimatix\Scripts\Editor\NodeGraph\RenderCubemapWizard.cs" />
+    <Compile Include="Assets\Archimatix\Scripts\Editor\NodeGraph\ShapeGUI.cs" />
+    <Compile Include="Assets\Archimatix\Scripts\Editor\RelationBezierCurve.cs" />
+    <Compile Include="Assets\Archimatix\Scripts\Editor\RelationEditorGUI.cs" />
+    <Compile Include="Assets\Archimatix\Scripts\Editor\Runtime\AXRuntimeEditor.cs" />
+    <Compile Include="Assets\Archimatix\Scripts\Editor\TextureDrawLine.cs" />
     <Compile Include="Assets\Photon Unity Networking\Editor\PhotonNetwork\AccountService.cs" />
     <Compile Include="Assets\Photon Unity Networking\Editor\PhotonNetwork\CullAreaEditor.cs" />
     <Compile Include="Assets\Photon Unity Networking\Editor\PhotonNetwork\PhotonConverter.cs" />
@@ -192,6 +245,18 @@
     <Compile Include="Assets\UFPS\Multiplayer\Scripts\Utility\Editor\vp_MPWindowRenamerEditor.cs.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Archimatix\Library\ColorKeys.txt" />
+    <None Include="Assets\Archimatix\Library\ColorsPersonal.txt" />
+    <None Include="Assets\Archimatix\Library\ColorsPro.txt" />
+    <None Include="Assets\Archimatix\README.txt" />
+    <None Include="Assets\Archimatix\Scripts\AXChangeLog Archive.txt" />
+    <None Include="Assets\Archimatix\Scripts\AXChangeLog.txt" />
+    <None Include="Assets\Archimatix\Scripts\Incorporated3rdPartyLibraries\LibNoise.Unity\COPYING.LESSER.txt" />
+    <None Include="Assets\Archimatix\Scripts\Incorporated3rdPartyLibraries\LibNoise.Unity\COPYING.txt" />
+    <None Include="Assets\Archimatix\Scripts\Incorporated3rdPartyLibraries\SimpleJSON\LICENSE.txt" />
+    <None Include="Assets\Archimatix\Scripts\Incorporated3rdPartyLibraries\poly2tri-cs-master\AUTHORS.txt" />
+    <None Include="Assets\Archimatix\Scripts\Incorporated3rdPartyLibraries\poly2tri-cs-master\LICENSE.txt" />
+    <None Include="Assets\Archimatix\Scripts\Incorporated3rdPartyLibraries\poly2tri-cs-master\README.txt" />
     <None Include="Assets\Photon Unity Networking\changelog.txt" />
     <None Include="Assets\Photon Unity Networking\link.xml" />
     <None Include="Assets\Photon Unity Networking\readme.txt" />

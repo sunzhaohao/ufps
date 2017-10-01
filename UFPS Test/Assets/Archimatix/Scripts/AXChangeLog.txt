@@ -1,0 +1,162 @@
+1.0.9
+- Fixed bug where library was called before it was initialized.
+
+1.0.8
+Features
+- New Deformer Nodes: NoiseDeformer, TaperDeformer, DomicalDeformer, TwistDeforemer, PlanDeformer, InflateDeformer 
+- Added Node and Cell Shapes to PlanRepeater2D (formerly only did Corner Shapes).
+
+Fixes
+- Fixed PlanRepeater bugs.
+- Corrections to rail uprights in LighthouseBase.
+
+
+1.0.7
+Features
+- Subdivision parameter added to nodes. 
+- Channeler now has an "All" channel, which combines all of the channels
+- Grouper will now add input meshes that are have no dependents inside the Grouper (re-adding the original functionality of the Grouper to the newer Groupees)
+- Added offset to JitterTool
+- Added Open node Graph button to the Model Inspector
+- Pro: DomicalDeformer Beta
+
+Fixes
+- fixed a bug where extra topCaps were created on Meshers.
+- fixed a bug where materials were not immediately updating after being modified in the Inspector.
+- fixed bug that expressed itself in the RicketyStairs
+- fixed a bug where rutime handles were not appearing.
+- fixed null-ref error in PlanRepeater
+
+1.0.6
+- Features
+- 	New Runtime tutorial: http://www.archimatix.com/manual/runtime-archimatix-for-artists
+- 	Runtime: Added auto-generate controller button to AXModel Inspector
+- 	Runtime: Created template file for runtime Controller
+- 	Extrude: LipEdgeBottom added; LipEdges can now be negative. 
+- 	Added AXRuntimeController base class
+
+- Fixed
+- 	respelled initiateRipple_setFloatValueFromGUIChange
+- 	setParameterValueByName now initiates Ripple (e.g. in the “set” turtle command).
+- 	changed Align_x to Align_X in Generators2D
+
+1.0.5
+Features
+Runtime Archimatix:
+- Expose a parameter to the model interface to make available for runtime GUI [Beta]
+- Runtime proxy parameters can now be edited.
+- Handles can be exposed for runtime.
+Node Graph Editor
+- The Channeler node now has a Channel parameter to let you set which of the input meshes is output.
+- Return of the ShapeOffsetter node to the sidebar menu.
+- Relation Edit Window now appears automatically when you select a Relation connector.
+- When dragging a parameter output, inputs of the same node become inactive as do inputs of other types.
+- Added buttons to move parameters up and down in the Controls list.
+TurtleScripting: 
+- Nested conditionals and loops are now supported.
+- Loops have a counter variable specified as the 2nd argument, e.g., loop 3 i
+Library: 
+- Optimizations for faster entry into Play mode and saving and deleting library items.
+- Added a description field to libraryItem (and AXNode).
+- Now uses relative file locations for maximum portability.
+- You can now choose that a library item not be displayed in the sidebar of the node graph editor window.
+- Improved GridView (though still needs some optimizations).
+- Editing now in ListView.
+Custom Nodes: 
+- Can now set parametricObject.thumbnailState to Open or Closed.
+- Can implement  the ILogic interface to expose logic textarea in node palette.
+- Can set 2D thumbnail line color woith parametricObject.thumbnailLineColor.
+- Generator Init() now called after gernerator has ParametricObject reference.
+
+Fixes:
+Runtime: Fixed several runtime memory leaks.
+Handle name textfield was initializing with text from the logic window.
+DifferenceRail now ensures that all resulting segments are in the direction of the source shape.
+Fixed a bug where custom nodes without an nodeicon were not displaying in the sidebar.
+Fixed axis Orientation bug for combined meshes.
+Thickened shapes had a missing face when the source shape was open.
+Specific namespace calls to UnityEditor.Tools to avoid asset conflicts.
+Control-delete deletes a word when editing a textfield instead of its node.
+Empty relation expressions were throwing an error when copying and pasting.
+Double-clicking a textfield in Grouper no longer closes it.
+PlanRepeater: The end corner placement of an open plan are correctly oriented now.
+ShapeMerger: clipping open shapes in DifferenceRail and IntersectionRail now works.
+
+
+1.0.4
+Features
+Added zoom level display at t
+he lower left corner of the node graph window.
+Extruder now has a subdivision parameter called "Segs" in preperation for the upcoming Deformer nodes.
+Relation Expressions may not be blank to make them uni-directional Relations.
+The Enabled parameter is now relatable so that nodes can be turned on and off from a controller such as a Grouper.
+Added zoom level display at the lower left corner of the node graph window.
+New node: Channeler - takes mutliple mesh inuts and allows for a rule set to be entered into the logic field.
+Added Parameter type String.
+Advanced AX: Added an isEven(pName) function to Turtle Script
+Advanced AX: Custom node classes (Subclasses of Generator) are now discoverable by Archiamtix. See: http://www.archimatix.com/manual/creating-custom-nodes
+Advanced AX: Added customeNodeGUIZones for custom node developers.
+
+Fixed 
+Middle points in FreeCurve are working again. And in Unity 5.5.
+Finished namespace encapsulating 3rd-party libraries to avoid conflicts with other assets.
+Setting the default material for a model caused it to disappear temerarily from the Scene View.
+Boolean relation connections were not being displayed.
+Turtle Scripting: sin and cos functions in turtle scripting
+Turtle Scripting: modulo function is now working in tutle script
+Turtle Scripting: Logic Refresh button works
+Turtle Scripting: Logic window no longer loses focus unexpectedly
+Turtle Scripting: Fixed a bug with the turtle script loop
+
+1.0.3
+Features
+Reversed the top edge Extrude handle behavior. By default the handle controls bevel radius and while holding the alt/option key down controls taper.
+Added Node Graph zooming with RMB in addition to scrollwheel.
+FlipX now works for shape parameters.
+Parameter number fields now expand with the node windows.
+Beta version of a new node called Lander, which stamps a building footprint in a Unity Terrain.
+
+Fixes
+Copy and paste bug in logic text area, expression fields and float fields.
+Wandering node graph camera has been fixed.
+Instancing a Grouper while it is open no longer causes a cycle.
+Removed references to depricated Handle calls which threw warnings in Unity 5.6.
+An un-handled GUI.Label state was causing the Unity ColorPicker and other GUI items to have bad label widths.
+Scene handles no longer are super-scaled when Parametric Object is scaled.
+Wrapped 3rd-party ibraries in custom namespaces to avoid conflicts with other assets.
+Deleteing a Shape node and then clicking on ShapeMerger in the node menu created a dangling connector to the location of the deleted node.
+
+1.0.2
+Fixes
+A UnityEditor calls in core runtime files were causing an error on project build.
+Middle mouse button no longer selects AX objects.
+Long scene save times fixed. No delay on save scene. Saving a library item is also faster now.
+Fixed Material inheritance bug where, if a node had a downstream node connected, it would not update a material change.
+
+1.0.1
+Features
+Added a Physics foldout to the MaterialTool node so that that node could specify a PhysicMaterial and a "density." The density is used to set the mass of any mesh created based on the meshe's volume.
+New Node: Physics Joiner - groups input nodes together physically using FixedJoints, essentially making a concave mesh collider.
+New Turtle script command: closed true/false
+Added a checkbox for Mesh Renderer to the Inspector so that generated object can act as a collider only.
+BETA NODE: Terrain Deformer
+Added Terrain input fields to PlanRepeater
+
+Fixes
+After editing a parameter field using keystrokes, clicking on the scene view window would temporarily hide the model.
+When when clicking on the new MaterialTool node button on the node palette, the texture was not responding to the controls until after a scene save.
+When a MaterialTool was deleted, the the parametric object was no longer inheriting texture control values from downstream.
+PrefabInstancer can now works in PlanRepeater.
+Error thrown in some cases when deleting a light from the scene.
+Can now make a Prefab with an AXModel that features a PrefabInstancer (thanks to Enoch)
+Adjusted Personal Skin colors to accentuate selection highlights.
+Fixed recent bug with errors cast when opening Transforms foldout on any node.
+Reinstated pan and zoom animation in the Node Graph Editor window
+New nodes appear in more predictable places
+Cut and paste distinguishes between text in fields and copy/pasting nodes themselves.
+Introduced a delay in KeyUp builds  in number fields that were causing slow downs when entering several numbers.
+
+1.0.0
+Archimatix is released!
+
+
