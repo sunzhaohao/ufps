@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UFPS Test", "UFPS Test.csproj", "{078CBB6B-E3ED-C94A-0160-D2FA95425F8D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UFPS Test.Plugins", "UFPS Test.Plugins.csproj", "{9602D2DC-226B-A2A5-B019-5154A88A7634}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UFPS Test.Editor", "UFPS Test.Editor.csproj", "{31F8E37D-6B94-EE60-CACA-4F2719381E42}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{078CBB6B-E3ED-C94A-0160-D2FA95425F8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{078CBB6B-E3ED-C94A-0160-D2FA95425F8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{078CBB6B-E3ED-C94A-0160-D2FA95425F8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{078CBB6B-E3ED-C94A-0160-D2FA95425F8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9602D2DC-226B-A2A5-B019-5154A88A7634}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9602D2DC-226B-A2A5-B019-5154A88A7634}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9602D2DC-226B-A2A5-B019-5154A88A7634}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9602D2DC-226B-A2A5-B019-5154A88A7634}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31F8E37D-6B94-EE60-CACA-4F2719381E42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31F8E37D-6B94-EE60-CACA-4F2719381E42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31F8E37D-6B94-EE60-CACA-4F2719381E42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31F8E37D-6B94-EE60-CACA-4F2719381E42}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

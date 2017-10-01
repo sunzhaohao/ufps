@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/UFPS/Multiplayer/Content/Levels/HelipadEscape/UFPSMP_HelipadEscape_Menu.unity
+  isLoaded: 1
+  isActive: 1
